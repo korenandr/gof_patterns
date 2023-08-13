@@ -2,6 +2,7 @@
 #define PATTERNS_GOF_APPBUILDER_HPP 
 
 #include <memory>
+#include <string>
 
 #include "App.hpp"
 #include "PatternsName.hpp"

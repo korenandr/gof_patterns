@@ -1,8 +1,10 @@
 #include "TerminalApp.hpp"
 #include "AppBuilder.hpp"
 
-#include <cstdio>
 #include <cxxopts.hpp>
+
+#include <cstdio>
+#include <iostream>
 
 namespace
 {
@@ -10,26 +12,6 @@ namespace
 const char* DEFAULT_GROUP = "";
 const char* DEFAULT_LOG_CONFIG_FILE_PATH = "log.properties";
 
-
-std::string createLogFilePath(const cxxopts::ParseResult& parseResult)
-{
-    if(parseResult.count("log") != 0)
-    {
-        const auto path = parseResult["log"].as<std::string>() + "/logs.txt";
-        const auto* file = fopen(path.c_str(), "w");
-
-        if (file)
-        {
-            fclose(file);
-            return path;
-        }        
-    }
-
-    std::cerr << "Failed to open log file: " << path << '\n';
-    std::cout << "Default path for log files will be /dev/null\n";
-
-    return "/dev/null";
-}
 
 AppOptions readOptions(cxxopts::Options& options, int argc, char** argv)
 {
@@ -45,21 +27,21 @@ AppOptions readOptions(cxxopts::Options& options, int argc, char** argv)
 
         const auto logFileConfigPath  = result["log"].as<std::string>();
 
-        return AppOptions{serializedDataPath, logFileConfigPath};
+        return AppOptions{logFileConfigPath, PatternName::EUnknown};
     }
-    catch (const cxxopts::OptionException& exc)
+    catch (const cxxopts::exceptions::exception& exc)
     {
         std::cerr << "Failed to run app: " << exc.what() << std::endl;
         exit(EXIT_FAILURE);
     }
 }
 
-cxxopts::Options makeOptions(int argc, char** argv)
+cxxopts::Options makeOptions(int /*argc*/, char** argv)
 {
     cxxopts::Options options(argv[0], "\nWelcome to my GOF patterns examples!\n");
     options.add_options(DEFAULT_GROUP)
             ("h,help", "Print help (this page)")
-            ("l,log", "Path to a config file for a logger", cxxopts::value<std::string>()->default_value(DEFAULT_LOG_CONFIG_FILE_PATH))
+            ("l,log", "Path to a config file for a logger", cxxopts::value<std::string>()->default_value(DEFAULT_LOG_CONFIG_FILE_PATH));
     return options;
 }
 

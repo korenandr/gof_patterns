@@ -3,6 +3,6 @@
 
 enum class PatternName {
     EUnknown = -1
-}
+};
 
 #endif //PATTERNS_GOF_PATTERNSNAME_HPP
