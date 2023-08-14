@@ -5,6 +5,7 @@
 
 #include "App.hpp"
 
+namespace app::gof {
 
 class TerminalApp final : public App
 {
@@ -14,5 +15,7 @@ public:
 private:
     std::unique_ptr<App> _appImpl;
 };
+
+} // namespace app::gof
 
 #endif //PATTERNS_GOF_TERMINALAPP_HPP

@@ -1,6 +1,8 @@
 #ifndef PATTERNS_GOF_APP_HPP
 #define PATTERNS_GOF_APP_HPP
 
+namespace app::gof {
+
 class App
 {
 public:
@@ -18,5 +20,7 @@ public:
 
     virtual int run(int argc, char** argv) = 0;
 };
+
+} // namespace app::gof
 
 #endif //PATTERNS_GOF_APP_HPP

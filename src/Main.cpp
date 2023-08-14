@@ -5,6 +5,7 @@
 int main(int argc, char** argv) {
     try
     {
+        using namespace app::gof;
         // Check command line arguments and run application
         return TerminalApp{}.run(argc, argv);
     }

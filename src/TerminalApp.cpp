@@ -6,8 +6,8 @@
 #include <cstdio>
 #include <iostream>
 
-namespace
-{
+namespace {
+using namespace app::gof;
 
 const char* DEFAULT_GROUP = "";
 const char* DEFAULT_LOG_CONFIG_FILE_PATH = "log.properties";
@@ -47,6 +47,8 @@ cxxopts::Options makeOptions(int /*argc*/, char** argv)
 
 }
 
+namespace app::gof {
+
 int TerminalApp::run(int argc, char** argv)
 {
     cxxopts::Options options = makeOptions(argc, argv);
@@ -57,3 +59,5 @@ int TerminalApp::run(int argc, char** argv)
 
     return _appImpl->run(argc, argv);
 }
+
+} // namespace app::gof

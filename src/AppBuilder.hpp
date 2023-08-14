@@ -7,6 +7,8 @@
 #include "App.hpp"
 #include "PatternsName.hpp"
 
+namespace app::gof {
+
 struct AppOptions
 {
     std::string logFileConfigPath;
@@ -19,5 +21,6 @@ public:
     static std::unique_ptr<App> createApp(const AppOptions& options);
 };
 
+} // namespace app::gof
 
 #endif //PATTERNS_GOF_APPBUILDER_HPP
