@@ -1,5 +1,5 @@
-#ifndef PATTERNS_GOF_TERMINALAPP_HPP
-#define PATTERNS_GOF_TERMINALAPP_HPP
+#ifndef APP_GOF_TERMINALAPP_HPP
+#define APP_GOF_TERMINALAPP_HPP
 
 #include <memory>
 
@@ -18,4 +18,4 @@ private:
 
 } // namespace app::gof
 
-#endif //PATTERNS_GOF_TERMINALAPP_HPP
+#endif //APP_GOF_TERMINALAPP_HPP

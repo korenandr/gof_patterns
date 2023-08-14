@@ -1,5 +1,5 @@
-#ifndef PATTERNS_GOF_APP_HPP
-#define PATTERNS_GOF_APP_HPP
+#ifndef APP_GOF_APP_HPP
+#define APP_GOF_APP_HPP
 
 namespace app::gof {
 
@@ -23,4 +23,4 @@ public:
 
 } // namespace app::gof
 
-#endif //PATTERNS_GOF_APP_HPP
+#endif //APP_GOF_APP_HPP

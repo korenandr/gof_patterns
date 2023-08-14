@@ -1,5 +1,5 @@
-#ifndef PATTERNS_GOF_APPBUILDER_HPP
-#define PATTERNS_GOF_APPBUILDER_HPP 
+#ifndef APP_GOF_APPBUILDER_HPP
+#define APP_GOF_APPBUILDER_HPP 
 
 #include <memory>
 #include <string>
@@ -23,4 +23,4 @@ public:
 
 } // namespace app::gof
 
-#endif //PATTERNS_GOF_APPBUILDER_HPP
+#endif //APP_GOF_APPBUILDER_HPP

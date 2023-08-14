@@ -1,5 +1,5 @@
-#ifndef PATTERNS_GOF_PATTERNSNAME_HPP
-#define PATTERNS_GOF_PATTERNSNAME_HPP
+#ifndef APP_GOF_PATTERNSNAME_HPP
+#define APP_GOF_PATTERNSNAME_HPP
 
 namespace app::gof {
 
@@ -9,4 +9,4 @@ enum class PatternName {
 
 } // namespace app::gof
 
-#endif //PATTERNS_GOF_PATTERNSNAME_HPP
+#endif //APP_GOF_PATTERNSNAME_HPP
