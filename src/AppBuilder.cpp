@@ -1,5 +1,5 @@
 #include "AppBuilder.hpp"
-#include "UnknownGofApp.hpp"
+#include "patterns/UnknownGofApp.hpp"
 
 #include <log4cplus/log4cplus.h>
 #include <log4cplus/initializer.h>

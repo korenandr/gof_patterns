@@ -2,7 +2,7 @@ set(SOURCE_FILES
         Main.cpp
         AppBuilder.cpp
         TerminalApp.cpp
-        UnknownGofApp.cpp
+        patterns/UnknownGofApp.cpp
         )
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
