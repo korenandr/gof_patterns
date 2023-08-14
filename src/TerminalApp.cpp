@@ -11,6 +11,7 @@ using namespace app::gof;
 
 const char* DEFAULT_GROUP = "";
 const char* DEFAULT_LOG_CONFIG_FILE_PATH = "log.properties";
+const char* DEFAULT_PATTERN_NAME = "unknown";
 
 
 AppOptions readOptions(cxxopts::Options& options, int argc, char** argv)
@@ -26,8 +27,9 @@ AppOptions readOptions(cxxopts::Options& options, int argc, char** argv)
         }
 
         const auto logFileConfigPath  = result["log"].as<std::string>();
+        const auto patternName = FromString(result["pattern"].as<std::string>());
 
-        return AppOptions{logFileConfigPath, PatternName::EUnknown};
+        return AppOptions{logFileConfigPath, patternName};
     }
     catch (const cxxopts::exceptions::exception& exc)
     {
@@ -41,7 +43,8 @@ cxxopts::Options makeOptions(int /*argc*/, char** argv)
     cxxopts::Options options(argv[0], "\nWelcome to my GOF patterns examples!\n");
     options.add_options(DEFAULT_GROUP)
             ("h,help", "Print help (this page)")
-            ("l,log", "Path to a config file for a logger", cxxopts::value<std::string>()->default_value(DEFAULT_LOG_CONFIG_FILE_PATH));
+            ("l,log", "Path to a config file for a logger", cxxopts::value<std::string>()->default_value(DEFAULT_LOG_CONFIG_FILE_PATH))
+            ("p,pattern", "Choose example of pattern", cxxopts::value<std::string>()->default_value(DEFAULT_PATTERN_NAME));
     return options;
 }
 

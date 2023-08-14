@@ -2,7 +2,9 @@ set(SOURCE_FILES
         Main.cpp
         AppBuilder.cpp
         TerminalApp.cpp
+        PatternsName.cpp
         patterns/UnknownGofApp.cpp
+        patterns/behavioral/memento/MementoGofApp.cpp
         )
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
