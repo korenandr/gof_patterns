@@ -1,13 +1,13 @@
 #include "MementoGofApp.hpp"
 
-#include <iostream>
+#include "log/logger.hpp"
 
 
 namespace app::gof::patterns::behavioral::memento {
 
 int MementoGofApp::run(int /*argc*/, char** /*argv*/)
 {
-    std::cout << "MementoGofApp: This pattern is not implemented yet...\n";
+    LOG_WARN("MementoGofApp: This pattern is not implemented yet...")
 
     return 0;
 }

@@ -1,13 +1,13 @@
 #include "UnknownGofApp.hpp"
 
-#include <iostream>
+#include "log/logger.hpp"
 
 
 namespace app::gof::patterns {
 
 int UnknownGofApp::run(int /*argc*/, char** /*argv*/)
 {
-    std::cout << "Incorrect command. Maybe this pattern is not implemented yet...\n";
+    LOG_WARN("Incorrect command. Maybe this pattern is not implemented yet...")
 
     return 0;
 }

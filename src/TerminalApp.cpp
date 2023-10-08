@@ -10,7 +10,7 @@ namespace {
 using namespace app::gof;
 
 const char* DEFAULT_GROUP = "";
-const char* DEFAULT_LOG_CONFIG_FILE_PATH = "log.properties";
+const char* DEFAULT_LOG_CONFIG_FILE_PATH = "log4cplus_properties.ini";
 const char* DEFAULT_PATTERN_NAME = "unknown";
 
 
@@ -26,7 +26,7 @@ AppOptions readOptions(cxxopts::Options& options, int argc, char** argv)
             exit(EXIT_SUCCESS);
         }
 
-        const auto logFileConfigPath  = result["log"].as<std::string>();
+        const auto logFileConfigPath = result["log"].as<std::string>();
         const auto patternName = FromString(result["pattern"].as<std::string>());
 
         return AppOptions{logFileConfigPath, patternName};
