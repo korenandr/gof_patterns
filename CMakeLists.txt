@@ -5,7 +5,7 @@ include(cmake/StandardProjectSettings.cmake)
 include(cmake/PreventInSourceBuilds.cmake)
 
 
-option(ENABLE_TESTING "Enable Test Builds" OFF)
+option(ENABLE_TESTING "Enable Test Builds" ON)
 
 # Link this 'library' to set the c++ standard / compile-time options requested
 add_library(project_options INTERFACE)
