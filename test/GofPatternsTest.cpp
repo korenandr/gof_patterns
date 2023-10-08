@@ -4,7 +4,7 @@
 
 using namespace app::gof;
 
-TEST(PackageTest, TEST_CREATE)
+TEST(GofPatternsTest, TEST_CREATE)
 {
     AppOptions defaultOptions;
     const auto app = AppBuilder::createApp(defaultOptions);
