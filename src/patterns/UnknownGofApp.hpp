@@ -3,14 +3,16 @@
 
 #include <memory>
 
-#include "App.hpp"
+#include "AppGof.hpp"
 
 
 namespace app::gof::patterns {
 
-class UnknownGofApp final : public App
+class UnknownGofApp final : public AppGof
 {
 public:
+    PatternName name() const final;
+
     int run(int argc, char** argv) override;
 };
 

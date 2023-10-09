@@ -8,7 +8,7 @@
 
 namespace app::gof {
 
-std::unique_ptr<App> AppBuilder::createApp(const AppOptions& options)
+std::unique_ptr<AppGof> AppBuilder::createApp(const AppOptions& options)
 {
     log4cplus::PropertyConfigurator::doConfigure(LOG4CPLUS_TEXT(options.logFileConfigPath));
 

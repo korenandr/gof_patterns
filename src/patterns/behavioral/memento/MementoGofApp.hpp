@@ -3,14 +3,16 @@
 
 #include <memory>
 
-#include "App.hpp"
+#include "AppGof.hpp"
 
 
 namespace app::gof::patterns::behavioral::memento {
 
-class MementoGofApp final : public App
+class MementoGofApp final : public AppGof
 {
 public:
+    PatternName name() const final;
+
     int run(int argc, char** argv) override;
 };
 

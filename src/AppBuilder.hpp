@@ -4,7 +4,7 @@
 #include <memory>
 #include <string>
 
-#include "App.hpp"
+#include "AppGof.hpp"
 #include "PatternsName.hpp"
 
 namespace app::gof {
@@ -18,7 +18,7 @@ struct AppOptions
 class AppBuilder final
 {
 public:
-    static std::unique_ptr<App> createApp(const AppOptions& options);
+    static std::unique_ptr<AppGof> createApp(const AppOptions& options);
 };
 
 } // namespace app::gof
