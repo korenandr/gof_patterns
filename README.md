@@ -2,6 +2,9 @@
 > This application shows GOF patterns implementation using modern C++
 <hr>
 
+[![Tokei](https://tokei.rs/b1/github/korenandr/gof_patterns)](https://github.com/Aaronepower/tokei)
+[![Setup Guide](https://img.shields.io/badge/cmake%20guide-wiki-blue.svg?style=flat)](https://github.com/korenandr/gof_patterns/wiki)
+
 # How to build:
 ```
 git clone --recurse-submodules git@github.com:korenandr/gof_patterns.git
