@@ -14,7 +14,7 @@ cmake --build build
 
 # How to use (example):
 ```
-cd ./build/src
+cd ./build/bin
 ./gof_patterns --help
 ./gof_patterns --pattern memento
 ```
