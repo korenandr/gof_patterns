@@ -30,5 +30,5 @@ add_subdirectory(src)
 
 if(ENABLE_TESTING)
     include(cmake/GoogleTests.cmake)
-    add_subdirectory(test)
+    add_subdirectory(tests)
 endif()
