@@ -3,7 +3,6 @@
 #include "patterns/behavioral/memento/MementoGofApp.hpp"
 
 #include <log4cplus/log4cplus.h>
-#include <log4cplus/initializer.h>
 
 
 namespace app::gof {

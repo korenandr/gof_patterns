@@ -5,7 +5,6 @@
 #include <string>
 
 #include "AppGof.hpp"
-#include "PatternsName.hpp"
 
 namespace app::gof {
 

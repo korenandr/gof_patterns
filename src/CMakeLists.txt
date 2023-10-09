@@ -2,7 +2,6 @@ set(SOURCE_FILES
         Main.cpp
         AppBuilder.cpp
         TerminalApp.cpp
-        PatternsName.cpp
         log/logger.cpp
         patterns/UnknownGofApp.cpp
         patterns/behavioral/memento/MementoGofApp.cpp

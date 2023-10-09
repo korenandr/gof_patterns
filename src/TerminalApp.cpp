@@ -3,6 +3,8 @@
 
 #include <cxxopts.hpp>
 
+#include <algorithm>
+#include <string>
 #include <cstdio>
 #include <iostream>
 
@@ -13,6 +15,17 @@ const char* DEFAULT_GROUP = "";
 const char* DEFAULT_LOG_CONFIG_FILE_PATH = "log4cplus_properties.ini";
 const char* DEFAULT_PATTERN_NAME = "unknown";
 
+
+PatternName FromString(std::string name) {
+
+    std::transform(std::cbegin(name), std::cend(name), std::begin(name), ::tolower);
+
+    if (name == "memento") {
+        return PatternName::EMemento;
+    }
+
+    return PatternName::EUnknown;
+}
 
 AppOptions readOptions(cxxopts::Options& options, int argc, char** argv)
 {
