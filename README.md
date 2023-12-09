@@ -8,12 +8,13 @@
 # How to build:
 ```
 git clone --recurse-submodules git@github.com:korenandr/gof_patterns.git
-cd ./gof_patterns && cmake -S . -B build
-cmake --build build
+cd ./gof_patterns
+docker build -t gof-patterns .
 ```
 
 # How to use (example):
 ```
+docker run -it --rm gof-patterns
 cd ./build/bin
 ./gof_patterns --help
 ./gof_patterns --pattern memento
