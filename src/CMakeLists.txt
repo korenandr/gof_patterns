@@ -20,3 +20,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE project_options
                                       PRIVATE project_warnings
                                       PRIVATE cxxopts
                                       PRIVATE log4cplus)
+
+install(TARGETS ${PROJECT_NAME})
+install(FILES ${configFile} TYPE LOCALSTATE)

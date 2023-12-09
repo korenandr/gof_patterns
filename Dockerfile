@@ -6,4 +6,6 @@ WORKDIR /home/app
 
 COPY . /home/app
 
-RUN cmake -S . -B build && cmake --build build
+RUN cmake -S . -B build && cmake --build build && cmake --install build --prefix /usr/local
+
+#ENTRYPOINT ["gof-patterns"]
