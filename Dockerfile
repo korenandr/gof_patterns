@@ -4,7 +4,7 @@ RUN apt-get update -y && apt-get install -y g++ cmake
 
 WORKDIR /home/app
 
-ADD . .
+COPY . .
 
 RUN chmod +x entrypoint.sh
 
