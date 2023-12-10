@@ -15,9 +15,8 @@ docker build -t gof-patterns .
 # How to use (example):
 ```
 docker run -it --rm gof-patterns
-cd ./build/bin
-./gof_patterns -l /usr/local/var/log4cplus_properties.ini --help
-./gof_patterns -l /usr/local/var/log4cplus_properties.ini --pattern memento
+gof_patterns -l /usr/local/var/log4cplus_properties.ini --help
+gof_patterns -l /usr/local/var/log4cplus_properties.ini --pattern memento
 ```
 
 ### Useful links
