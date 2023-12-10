@@ -16,8 +16,8 @@ docker build -t gof-patterns .
 ```
 docker run -it --rm gof-patterns
 cd ./build/bin
-./gof_patterns --help
-./gof_patterns --pattern memento
+./gof_patterns -l /usr/local/var/log4cplus_properties.ini --help
+./gof_patterns -l /usr/local/var/log4cplus_properties.ini --pattern memento
 ```
 
 ### Useful links
