@@ -23,3 +23,4 @@ docker run --rm gof-patterns --pattern memento
 * [GOF Design Patterns](https://refactoring.guru/design-patterns)
 * [C++ Starter Template](https://github.com/cpp-best-practices/gui_starter_template)
 * [Google Test](https://github.com/google/googletest/blob/main/docs/primer.md)
+* [Dockerfile Linter](https://hadolint.github.io/hadolint)
