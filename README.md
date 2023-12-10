@@ -14,8 +14,8 @@ docker build -t gof-patterns .
 
 # How to use (examples):
 ```
-docker run -it --rm gof-patterns
-docker run -it --rm gof-patterns --pattern memento
+docker run --rm gof-patterns
+docker run --rm gof-patterns --pattern memento
 ```
 
 ### Useful links
