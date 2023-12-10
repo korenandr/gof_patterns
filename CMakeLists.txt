@@ -4,8 +4,9 @@ project(gof-patterns VERSION 1.0)
 include(cmake/StandardProjectSettings.cmake)
 include(cmake/PreventInSourceBuilds.cmake)
 
-
-option(ENABLE_TESTING "Enable Test Builds" ON)
+# If you use static libs then change log4cplus name to log4cpusS in target_link_libraries command
+option(BUILD_SHARED_LIBS "Choos shared or static libs building" OFF)
+option(ENABLE_TESTING "Enable sest Builds" ON)
 
 # Link this 'library' to set the c++ standard / compile-time options requested
 add_library(project_options INTERFACE)

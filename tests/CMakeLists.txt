@@ -16,7 +16,7 @@ target_include_directories(gof_patterns_test PRIVATE
 target_link_libraries(gof_patterns_test PRIVATE gtest_main
                                         PRIVATE project_options
                                         PRIVATE project_warnings
-                                        PRIVATE log4cplus)
+                                        PRIVATE log4cplusS)
 
 include(GoogleTest)
 gtest_discover_tests(gof_patterns_test)
