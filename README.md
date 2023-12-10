@@ -12,11 +12,10 @@ cd ./gof_patterns
 docker build -t gof-patterns .
 ```
 
-# How to use (example):
+# How to use (examples):
 ```
 docker run -it --rm gof-patterns
-gof_patterns -l /usr/local/var/log4cplus_properties.ini --help
-gof_patterns -l /usr/local/var/log4cplus_properties.ini --pattern memento
+docker run -it --rm gof-patterns --pattern memento
 ```
 
 ### Useful links

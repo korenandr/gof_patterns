@@ -6,6 +6,10 @@ WORKDIR /home/app
 
 COPY . /home/app
 
+RUN chmod +x entrypoint.sh
+
 RUN cmake -S . -B build && cmake --build build && cmake --install build --prefix /usr/local
 
-#ENTRYPOINT ["gof-patterns"]
+ENTRYPOINT ["./entrypoint.sh"]
+
+CMD ["--help"]
